@@ -1,8 +1,8 @@
 
-public class EastAsiaCountries extends Country {
+public class SouthEastAsiaCountries extends Country {
     private String countryTerrain;
 
-    public EastAsiaCountries(String countryCode, String countryName, float totalArea, String countryTerrain) {
+    public SouthEastAsiaCountries(String countryCode, String countryName, float totalArea, String countryTerrain) {
         super(countryCode, countryName, totalArea);
         this.countryTerrain = countryTerrain;
     }

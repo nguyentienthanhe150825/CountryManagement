@@ -1,7 +1,7 @@
 
 public class Main {
     public static void main(String[] args) {
-        ManageEastAsiaCountries manageEastAsiaCountries = new ManageEastAsiaCountries();
+        ManageSouthEastAsiaCountries manageSouthEastAsiaCountries = new ManageSouthEastAsiaCountries();
 
         while (true) {
             // Display menu
@@ -12,9 +12,9 @@ public class Main {
 
             // Select option
             switch (option) {
-                // Add country
+                // Add 5 country
                 case 1:
-                
+                    manageSouthEastAsiaCountries.addCountryInformation();
                     break;
 
                 // Display list country
