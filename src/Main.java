@@ -19,7 +19,7 @@ public class Main {
 
                 // Display list country
                 case 2:
-
+                    manageSouthEastAsiaCountries.displayCountry();
                     break;
 
                 // Search country by name
@@ -43,7 +43,7 @@ public class Main {
     private static void displayMenu() {
         System.out.println("                               MENU\n"
                 + "==========================================================================\n"
-                + "1. Input the information of 5 countries in East Asia\n"
+                + "1. Input the information of 5 countries in South East Asia\n"
                 + "2. Display the information of country you've just input\n"
                 + "3. Search the information of country by user-entered name\n"
                 + "4. Display the information of countries sorted name in ascending order  \n"
