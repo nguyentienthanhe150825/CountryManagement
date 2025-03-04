@@ -8,7 +8,7 @@ public class Main {
             Main.displayMenu();
 
             // Enter option
-            int option = GetDataInput.inputOption("Enter your option: ", "Please input number!", 1, 5);
+            int option = GetDataInput.inputOption("Enter your option: ", "Option must be positive number.", 1, 5);
 
             // Select option
             switch (option) {
