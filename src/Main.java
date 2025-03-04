@@ -27,8 +27,9 @@ public class Main {
                     manageSouthEastAsiaCountries.searchInformationCountry();
                     break;
 
+                // Display the information of countries sorted name in ascending order
                 case 4:
-
+                    manageSouthEastAsiaCountries.sortAscendingCountryByName();
                     break;
 
                 // Exit
