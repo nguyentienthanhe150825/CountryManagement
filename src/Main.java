@@ -24,7 +24,7 @@ public class Main {
 
                 // Search country by name
                 case 3:
-
+                    manageSouthEastAsiaCountries.searchInformationCountry();
                     break;
 
                 case 4:

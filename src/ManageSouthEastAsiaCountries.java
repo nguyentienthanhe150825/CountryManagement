@@ -5,11 +5,16 @@ public class ManageSouthEastAsiaCountries {
     private List<SouthEastAsiaCountries> listCountry = new ArrayList<>();
 
     public void addCountryInformation() {
-        // listCountry.add(new SouthEastAsiaCountries("VN", "Viet Nam", 331698, "Nice"));
-        // listCountry.add(new SouthEastAsiaCountries("IDN", "Indonesia", 1860360, "Nice"));
-        // listCountry.add(new SouthEastAsiaCountries("MAS", "Malaysia", 123456, "Nice"));
-        // listCountry.add(new SouthEastAsiaCountries("THAI", "Thai Lan", 513120, "Nice"));
-        // listCountry.add(new SouthEastAsiaCountries("CPC", "Campuchia", 181035, "Nice"));
+        // listCountry.add(new SouthEastAsiaCountries("VN", "Viet Nam", 331698,
+        // "Nice"));
+        // listCountry.add(new SouthEastAsiaCountries("IDN", "Indonesia", 1860360,
+        // "Nice"));
+        // listCountry.add(new SouthEastAsiaCountries("MAS", "Malaysia", 123456,
+        // "Nice"));
+        // listCountry.add(new SouthEastAsiaCountries("THAI", "Thai Lan", 513120,
+        // "Nice"));
+        // listCountry.add(new SouthEastAsiaCountries("CPC", "Campuchia", 181035,
+        // "Nice"));
         // listCountry.add(new SouthEastAsiaCountries("CN", "China", 9596961, "Nice"));
         // listCountry.add(new SouthEastAsiaCountries("JP", "Japan", 377930, "Nice"));
         // listCountry.add(new SouthEastAsiaCountries("MA", "Myanmar", 676578, "Nice"));
@@ -63,6 +68,37 @@ public class ManageSouthEastAsiaCountries {
                 country.display();
                 System.out.println("");
             }
+        }
+    }
+
+    public void searchInformationCountry() {
+        // If the list does not contain information country, notices to user
+        if (listCountry.isEmpty()) {
+            System.out.println("List is empty. Please add more country into list.");
+        }
+
+        // If the list has information country.
+        if (!listCountry.isEmpty()) {
+            String countryName = GetDataInput.inputString("Enter name of country:",
+                    "Country name contains digit or special characters or is empty. Please input again!",
+                    "^[a-zA-Z][a-zA-Z ]+");
+
+            System.out.format("%-20s%-20s%-20s%-20s\n", "Code", "Name", "Total Area", "Terrain");
+            boolean checkExistName = false;
+
+            for (SouthEastAsiaCountries country : listCountry) {
+                //If Country name in the list contains the Name entered by the user
+                if (country.getCountryName().toLowerCase().contains(countryName.toLowerCase())) {
+                    checkExistName = true;
+                    country.display();
+                    System.out.println("");
+                }
+            }
+
+            if (checkExistName == false) {
+                System.out.println("No country in the list has the same name!");
+            }
+
         }
     }
 
